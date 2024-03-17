@@ -1,34 +1,23 @@
-# Rest_Client_Android
+The objective for this week is implement a simple Android app that consumes a web service. Use the backend that you have programmed for the definition of the service:
 
-Implement an app that consumes the Tracks service and has the following feature:
+http://localhost:8080/swagger/
 
-- Show a list of the tracks stored in the service. Use a RecyclerView for the list.
-- Be able to add new tracks to the system.
-- When a specific track in the list is tap, open a new activity when its fields can be edited.
-- Be able to remove an existing track to the system.
+For this task, I recommend follow the following tutorials covering Retrofit and RecyclerView:
 
-//////////////////////////////////////////////////////////////////
+http://www.vogella.com/tutorials/AndroidRecyclerView/article.html
 
-- Se ha creado una carpeta de activities, una carpeta models, una interficie API y una clase RetrofitClient.
+This other one also applies to non-Android Java projects:
 
-- Se ha creado tambien una carpeta layout dónde se encuentra todos los .xml.
+http://www.vogella.com/tutorials/Retrofit/article.html
 
-- He creado unas actividades a partir de un template anterior y modificarlo para que se adecuado con el tema que trabajamos.
+Be careful with the gradle configuration:
 
-Estas actividades han sido:
-- AddTrackActivity
-- MainActivity
-- TrackActivity
-- TrackListActivity
+you have to modify the app gradle not the project one.
+the version of com.android.* packages should be the same, i.e you cannot mix versions from the code pre-generated with Android Studio and the ones from the example.
+some gradle keywords have been deprecated and should be changed, i.e compile vs implementation
+After doing the tutorials you have to implement an app that consumes the Tracks service and has the following feature:
 
-Tambien se ha implementado una RecyclerViewAdapter, que es lo que pedia tambien el ejercicio.
-
-//////////////////////////////////////////////////////////////////
-
-Mejoras o cosas a comprovar:
-
-- Mejorar el diseño de los .xml, porque son templates de un ejemplo pero modificados únicamente con el tema de la actividad.
-
-- Incrementar funciones que puede hacer nuestra aplicación de tracks.
-
-/////////////////////////////////////////////////////////////////
+Show a list of the tracks stored in the service. Use a RecyclerView for the list.
+Be able to add new tracks to the system.
+When a specific track in the list is tap, open a new activity when its fields can be edited.
+Be able to remove an existing track to the system.
